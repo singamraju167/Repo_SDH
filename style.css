@@ -15,7 +15,7 @@
     }
     
     header {
-        background-color: #413fdf;
+        background-color: #6c16dd;
         width: 100%;
         height: 100vh;
         color: white;
@@ -61,7 +61,7 @@
     }
     
     li a:hover {
-        color: blue;
+        color: #6c16dd;
         background-color: rgb(206, 235, 235);
     }
     
@@ -90,7 +90,7 @@
     }
     
     .avatar img {
-        max-width: 100%;
+        width: 700px;
         height: auto;
         border-radius: 50%;
     }
@@ -118,6 +118,7 @@
         }
         header {
             height: 50vh;
+            background: #6c16dd;
         }
         .hamburger {
             opacity: 0;
@@ -145,7 +146,7 @@
     
     @media only screen and (max-width: 1000px) {
         header {
-            height: 135vh;
+            height: 150vh;
         }
         nav {
             width: 100%;
@@ -153,7 +154,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #413fdf;
+            background: #6c16dd;
             border-bottom: 2px solid white;
         }
         .hamburger {
