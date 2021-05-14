@@ -32,8 +32,8 @@
     }
     
     .logo img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         margin: 0.5rem;
     }
@@ -56,7 +56,7 @@
     
     ul li a {
         color: white;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         font-weight: bold;
     }
     
@@ -90,9 +90,10 @@
     }
     
     .avatar img {
-        width: 700px;
-        height: auto;
+        width: 800px;
+        height: 700px;
         border-radius: 50%;
+        margin: 0;
     }
     
     .desc {
@@ -103,12 +104,12 @@
     .celeb {
         color: blue;
         background: #fff;
-        padding: 1rem;
         font-size: 1.5rem;
         font-weight: bold;
-        border-radius: 5px;
+        border-radius: 3px;
         border: none;
         margin-top: 2rem;
+        padding: 10px;
         box-shadow: 5px 5px 5px 3px rgb(104, 99, 99);
     }
     
@@ -131,8 +132,8 @@
         }
         .avatar img {
             max-width: 100%;
-            height: 500px;
-            padding: 2rem;
+            height: auto;
+            padding-top: 1rem;
             border-radius: 50%;
         }
         .avatar h1 {
@@ -175,6 +176,7 @@
             width: 100%;
             height: auto;
             padding: 0;
+            border-radius: 0;
         }
         .avatar {
             display: block;
@@ -191,16 +193,18 @@
         .avatar_content h1 {
             font-size: 1.5rem;
             text-align: center;
+            padding: 1rem;
         }
         .avatar_content p {
-            width: 25ch;
+            width: 100%;
             font-size: 1rem;
             text-align: center;
             margin: auto;
         }
         .celeb {
-            width: 10rem;
-            height: 3rem;
-            font-size: 1rem;
+            width: 7rem;
+            height: 2rem;
+            font-size: 0.8rem;
+            padding: 0;
         }
     }
