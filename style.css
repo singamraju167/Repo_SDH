@@ -72,10 +72,6 @@
         opacity: 0;
     }
     
-    .line {
-        display: none;
-    }
-    
     .avatar {
         display: flex;
         width: 100%;
@@ -117,6 +113,9 @@
     }
     
     @media only screen and (max-width: 1024px) {
+        nav {
+            border-bottom: 2px solid white;
+        }
         header {
             height: 50vh;
         }
@@ -146,7 +145,7 @@
     
     @media only screen and (max-width: 1000px) {
         header {
-            height: 130vh;
+            height: 135vh;
         }
         nav {
             width: 100%;
@@ -155,6 +154,7 @@
             top: 0;
             left: 0;
             background-color: #413fdf;
+            border-bottom: 2px solid white;
         }
         .hamburger {
             opacity: 100%;
@@ -169,9 +169,6 @@
         }
         ul {
             display: none;
-        }
-        .line {
-            display: block;
         }
         .avatar img {
             width: 100%;
