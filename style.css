@@ -23,7 +23,8 @@ section {
 /*--------------------------------------------------------------------------NavBar--------------------------------------------*/
 
 nav {
-    background: #6c16dd;
+    background: #6818D9;
+    /* background: #271d3d; */
     height: 80px;
     width: 100%;
     display: flex;
@@ -60,10 +61,9 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-a.active,
-a:hover {
+a:hover,
+a:active {
     background: #1b9bff;
-    transition: .5s;
 }
 
 .checkbtn {
@@ -91,6 +91,7 @@ a:hover {
     display: flex;
     width: 100%;
     background: #6c16dd;
+    /* background: #271d3d; */
     height: 90vh;
     color: white;
     margin-top: 5rem;
