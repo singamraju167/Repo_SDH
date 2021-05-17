@@ -23,8 +23,8 @@ section {
 /*--------------------------------------------------------------------------NavBar--------------------------------------------*/
 
 nav {
-    background: #6818D9;
-    /* background: #271d3d; */
+    /* background: #6818D9; */
+    background: #6d05ff;
     height: 80px;
     width: 100%;
     display: flex;
@@ -90,7 +90,7 @@ a:active {
 .avatar {
     display: flex;
     width: 100%;
-    background: #6c16dd;
+    background: #6d05ff;
     /* background: #271d3d; */
     height: 90vh;
     color: white;
