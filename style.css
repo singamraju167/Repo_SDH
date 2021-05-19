@@ -13,15 +13,17 @@ a:link {
 
 body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 button {
     cursor: pointer;
 }
 
-section {
+
+/* section {
     margin-bottom: 7rem;
-}
+} */
 
 
 /*--------------------------------------------------------------------------NavBar--------------------------------------------*/
@@ -35,6 +37,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5;
 }
 
 label.logo {
@@ -140,7 +143,7 @@ a:active {
     box-shadow: 5px 5px 5px 3px rgb(104, 99, 99);
 }
 
-@media (max-width:952px) {
+@media (max-width: 952px) {
     section {
         margin-bottom: 7rem;
     }
@@ -157,7 +160,7 @@ a:active {
     }
 }
 
-@media (max-width:858px) {
+@media (max-width: 858px) {
     .checkbtn {
         display: block;
         float: right;
@@ -175,7 +178,7 @@ a:active {
         height: 100vh;
         background: #6d05ff;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
     }
     nav ul li {
         display: block;
@@ -329,7 +332,7 @@ a:active {
     border: 2px solid black;
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
     .pro_desc {
         width: 40ch;
         letter-spacing: 1.5px;
@@ -337,7 +340,7 @@ a:active {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
     .banner {
         width: 100%;
         padding: 0.5rem;
@@ -372,16 +375,259 @@ a:active {
     }
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
     .pro_desc {
         font-size: 1rem;
     }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
     .main_pro {
         width: 300px;
         height: 200px;
         margin: 1rem;
+    }
+}
+
+
+/*------------------------------------------------------Testimonials-----------------------------------------------*/
+
+section {
+    width: 100%;
+    z-index: -1;
+}
+
+#test h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.test .testimonials {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+}
+
+.test .box_shape {
+    background-color: rgb(243, 103, 103);
+    width: 500px;
+    height: 500px;
+    padding: 2rem 0;
+    margin: 7rem 0;
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 40%;
+}
+
+.test .rectangle {
+    background: rgb(27, 117, 219);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 135rem;
+    left: 0;
+    opacity: 40%;
+    z-index: 1;
+}
+
+.rect_image {
+    width: 100%;
+    height: 400px;
+    z-index: 3;
+    position: absolute;
+    top: 50rem;
+    display: flex;
+}
+
+.rect_image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.rect_content {
+    padding: 4.5rem 0;
+    margin-left: 10rem;
+}
+
+.rect_content h2 {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.p_content {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5vw;
+    width: 50ch;
+}
+
+.box_shape_2 {
+    background: black;
+}
+
+.box_shape_2 {
+    background-color: rgb(243, 103, 103);
+    width: 500px;
+    height: 500px;
+    float: right;
+    position: absolute;
+    top: 65rem;
+    right: 0;
+    transform: rotate(45deg);
+    opacity: 40%;
+}
+
+.rectangle_2 {
+    background: rgb(27, 117, 219);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 70rem;
+    right: 0;
+    opacity: 40%;
+    z-index: 1;
+}
+
+.rect_image {
+    width: 100%;
+    height: 400px;
+    z-index: 3;
+    position: absolute;
+    top: 132rem;
+    display: flex;
+}
+
+.rect_image_2 {
+    width: 100%;
+    height: 400px;
+    z-index: 3;
+    position: absolute;
+    top: 70rem;
+    display: flex;
+}
+
+.rect_image_2 img {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    border-radius: 50%;
+    top: -5rem;
+    right: 0;
+    z-index: 2;
+}
+
+.rect_content_2 {
+    padding: 4.5rem 0;
+    margin-left: 10rem;
+}
+
+.rect_content_2 h2 {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.p_content_2 {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5vw;
+    width: 50ch;
+}
+
+.mob_container {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .rectangle {
+        width: 120%;
+    }
+    .rect_image {
+        width: 100%;
+        position: absolute;
+        top: 110rem;
+    }
+    .test .rectangle {
+        position: absolute;
+        top: 115rem;
+    }
+    .rect_content {
+        width: 100%;
+        padding: 7rem 2rem;
+    }
+    .rect_content h2 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+    .p_content {
+        width: 30ch;
+    }
+    .rect_content_2 {
+        padding: 2rem 0;
+        margin-left: 5rem;
+    }
+    .rect_content_2 h2 {
+        width: 20ch;
+        font-size: 1.5rem;
+        margin-right: 2rem;
+    }
+    .p_content_2 {
+        width: 30ch;
+    }
+}
+
+@media (max-width: 800px) {
+    .test {
+        display: none;
+    }
+    .mob_container {
+        display: block;
+    }
+    .mob_inner {
+        width: 100%;
+        display: block;
+    }
+    .mob_inner img {
+        width: 100%;
+        height: auto;
+    }
+    .inner_content {
+        padding-top: 1rem;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .inner_content h2 {
+        font-size: 1rem;
+    }
+    .inner_content p {
+        font-size: 1rem;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .inner_content h2 {
+        font-size: 2rem;
+    }
+    .inner_content p {
+        font-size: 2rem;
+        margin: auto;
+    }
+}
+
+@media (max-width: 540px) {
+    .mob_container {
+        width: 100%;
+    }
+    .inner_content h2 {
+        font-size: 1rem;
+    }
+    .inner_content p {
+        font-size: 1rem;
+        margin: auto;
     }
 }
