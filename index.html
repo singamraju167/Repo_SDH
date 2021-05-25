@@ -4,20 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>New</title>
     <link rel="stylesheet" href="style.css">
-    <script src = "script.js" defer></script>
-
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
 <body>
- <!-------------------------------------------------------------------NavBar---------------------------------------------------------->
-    <nav>
+    <header>
+       <nav>
         <input type = "checkbox" id = "check" checked = "checked"></input>
         <label for="check" class = "checkbtn">
             <i class="fas fa-bars"></i>
@@ -33,40 +26,75 @@
             <li><a href = "#">Testimonials</a></li>
             <li><a href = "#">Contact</a></li>
         </ul>
-    </nav>
+     </nav>
+    </header>
 
-     <section>
-            <div class = "avatar">
-                <div class = "avatar_content">
-                    <h1>Creating a World <br> Of Health and Bliss</h1>
-                    <p class = "desc">Sanford Drug House Celebrates 40 years.<br> India's first producer of Zinc Acetate capsules specially for treatment for Wilson's disease</p>
-                    <button class = "celeb">Join celebration</button>
+    <section id = "banner" class = "banner">
+                <div class = "b_container d-flex">
+                    <div class = "b_content">
+                        <h1>Creating a World Of <br> Health and bliss</h1>
+                        <p>Sanford Drug House Celebrates 40 years. India's first producer of Zinc Acetate capsules specially for treatment for Wilson's disease</p>
+                        <div class = "b_btn">
+                            <button>Join Celebration</button>
+                        </div>
+                    </div>
+                    <div class = "b_image">
+                        <img src = "https://image.freepik.com/free-vector/pharmacists-holding-bottles-with-antibiotic-pills-vitamins-drugs-thermometer-ointment-tube-vector-illustration-drugstore-medical-store-pharmacy-pharmaceutical-business-concept_74855-10132.jpg" alt = "image">
+                    </div>
                 </div>
-                <img src = "images/avatar.jpg">
+    </section>
 
+    <!--<div>
+        <h1>This is demo</h1>
+    </div>-->
+
+    <!--------------------------------------------------------Feature Product---------------------------------------->
+<section class = "fp">
+    <div class = "product">
+        <div class = "fp_banner">
+            <div class = "fp_inner d-flex">
+                <img src = "images/capsule.jpg" class = "fp_banner_img">
+                <h3>Feature Product</h3>
+                <img src = "images/capsule.jpg" class = "banner_img">
             </div>
-            
-        </section>
-        <br>
-
-<!--------------------------------------------------------Feature Product---------------------------------------->
-<section>
- <div class = "banner" style = "overflow: hidden">
-    <img src = "images/capsule.jpg" class = "banner_img">
-        <h3>Feature Product</h3>
-      <img src = "images/capsule.jpg" class = "banner_img">
-    </div>
-    <div class = "product" style = "overflow: hidden">
-        <img src = "images/pro_anime.jpg" class = "pro_anime">
-        <div class = "pro_content">
-            <h2>WILZIN-25/50</h2>
-            <p class = "pro_desc">Zinc Acetate Capsules
+        </div>
+        <div class = "fp_cont d-flex">
+            <img src = "images/pro_anime.jpg" class = "pro_anime">
+            <div class = "pro_content">
+                <h2>WILZIN-25/50</h2>
+                <p class = "pro_desc">Zinc Acetate Capsules
                 Supportive therapy for WILSON’S DISEASE
                 Wilzin containing zinc acetate, is an effective new weapon in the treatment of Wilson’s Disease. 
                 As Zinc Acetate is economical and least toxic, 
                 it is vital alternative to chelating agents like Penicillamine & Trientine Hydrochloride.
-            </p>
-            <img src = "images/wiliz.jpg" class = "main_pro border">
+                </p>
+                <img src = "images/wiliz.jpg" class = "main_pro border">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <!--------------------------------------------Mobile con testimonials---------------------------------->
+    <div class = "mob_container">
+        <h1 style = "text-align:center; padding:1rem">Testimonials</h1>
+        <div class = "mob_inner">
+            <img src = "images/doctor.jpeg">
+            <div class = "inner_content">
+               <h2>Best Chemical Products & Services</h2>
+                    <p class = "p_content">"I have used several chemical products from various chemical companies but finally, I was happy & satisfied with the service. I would like to recommend others to buy chemical products."</p>  
+            </div>
+        </div>
+        <div class = "mob_inner">
+            <img src = "images/cs.jpg">
+            <div class = "inner_content">
+                <h2>Awesome Customer Service</h2>
+                <p class = "p_content_2">
+                            "The customer support group is constantly anxious to help. 
+                            We have full trust in their products and services. 
+                            They have dependably provided synthetic compounds on time and have great quality products."
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -108,28 +136,5 @@
             </div>
         </div>
     </section>
-
-    <!--Mobile View Testimonials-->
-    <div class = "mob_container">
-        <h1 style = "text-align:center; padding:1rem">Testimonials</h1>
-        <div class = "mob_inner">
-            <img src = "images/doctor.jpeg">
-            <div class = "inner_content">
-               <h2>Best Chemical Products & Services</h2>
-                    <p class = "p_content">"I have used several chemical products from various chemical companies but finally, I was happy & satisfied with the service. I would like to recommend others to buy chemical products."</p>  
-            </div>
-        </div>
-        <div class = "mob_inner">
-            <img src = "images/cs.jpg">
-            <div class = "inner_content">
-                <h2>Awesome Customer Service</h2>
-                <p class = "p_content_2">
-                            "The customer support group is constantly anxious to help. 
-                            We have full trust in their products and services. 
-                            They have dependably provided synthetic compounds on time and have great quality products."
-                </p>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

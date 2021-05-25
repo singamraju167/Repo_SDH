@@ -1,633 +1,662 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
-}
-
-button {
-    cursor: pointer;
-}
-
-
-/* section {
-    margin-bottom: 7rem;
-} */
-
-
-/*--------------------------------------------------------------------------NavBar--------------------------------------------*/
-
-nav {
-    /* background: #6818D9; */
-    background: #6d05ff;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
-
-label.logo {
-    color: white;
-    font-size: 25px;
-    line-height: 80px;
-    padding: 0;
-}
-
-nav ul {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-a:hover,
-a:active {
-    background: #1b9bff;
-}
-
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check {
-    display: none;
-}
-
-.logo_img {
-    width: 60px;
-    height: 60px;
-    border-radius: 30%;
-    margin: 0.5rem;
-}
-
-.avatar {
-    display: flex;
-    width: 100%;
-    background: #6d05ff;
-    /* background: #271d3d; */
-    height: 90vh;
-    color: white;
-    margin-top: 5rem;
-}
-
-.avatar_content {
-    width: 50%;
-    padding: 5rem;
-    margin: 0 1rem;
-    overflow: hidden;
-}
-
-.avatar h1 {
-    font-family: "Lato", sans-serif;
-    font-weight: bolder;
-    font-size: 3rem;
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.avatar img {
-    width: 950px;
-    height: auto;
-    border-radius: 50%;
-    margin: 0 2rem;
-}
-
-.desc {
-    font-size: 2rem;
-    padding-top: 1rem 4rem;
-}
-
-.celeb {
-    color: blue;
-    background: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 3px;
-    border: none;
-    margin-top: 0.5rem;
-    padding: 10px;
-    box-shadow: 5px 5px 5px 3px rgb(104, 99, 99);
-}
-
-@media (max-width: 952px) {
-    section {
-        margin-bottom: 7rem;
-    }
-    label.logo {
-        font-size: 15px;
-        padding-left: 10px;
-    }
-    nav ul {
-        z-index: -1;
-        margin-top: 3rem;
-    }
-    nav ul li a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-        float: right;
-        padding: 0.2rem;
-        position: fixed;
-        right: 0;
-        margin-right: 2rem;
-    }
-    ul {
-        position: fixed;
-        top: 80px;
-        /* left: -55.5%; */
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #6d05ff;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a {
-        font-size: 15px;
-    }
-    #check:checked~ul {
-        left: -200%;
-    }
-    .avatar {
-        margin-top: 0;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .avatar {
-        height: 40vh;
-    }
-    .avatar img {
-        width: 60%;
-        height: 500px;
-        padding-top: 1rem;
-        border-radius: 50%;
-        margin: 0;
-    }
-    .avatar h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-    .desc {
-        font-size: 1rem;
-        padding-top: 0;
-        margin: 0;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .checkbtn {
-        margin-right: 0.5rem;
-    }
-    .avatar img {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        border-radius: 0;
-    }
-    .avatar {
-        display: block;
-        width: 100%;
-        padding: 3rem 0;
-        height: 75vh;
-    }
-    .avatar_content {
-        display: block;
-        width: 100%;
-        padding: 2rem 0;
-        text-align: center;
-        overflow: hidden;
-    }
-    .avatar_content h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        padding-top: 1rem;
-    }
-    .avatar_content {
-        margin: 0;
-    }
-    .avatar_content p {
-        width: 60%;
-        font-size: 1rem;
-        text-align: center;
-        margin: auto;
-        padding: 0;
-    }
-    .celeb {
-        width: 7rem;
-        height: 2rem;
-        font-size: 0.8rem;
-        padding: 0;
-    }
-}
-
-
-/*------------------------------------------------Feature Product----------------------------------------*/
-
-.banner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(155, 174, 236);
-    padding: 2rem;
-}
-
-.banner img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 1px solid black;
-    margin: 0 1rem;
-}
-
-.banner h3 {
-    font-size: 3.5rem;
-    font-family: "Poppins", sans-serif;
-    color: black;
-}
-
-.product {
-    display: flex;
-}
-
-.banner_img {
-    width: 900px;
-}
-
-.pro_anime {
-    width: 900px;
-}
-
-.pro_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.pro_content h2 {
-    font-size: 3rem;
-    padding: 2rem;
-}
-
-.pro_desc {
-    width: 40ch;
-    padding: 0 2rem;
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-}
-
-.main_pro {
-    width: 300px;
-    height: 200px;
-    margin: 2rem 0;
-}
-
-.border {
-    border: 2px solid black;
-}
-
-@media (max-width: 1024px) {
-    .pro_desc {
-        width: 40ch;
-        letter-spacing: 1.5px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .banner {
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .banner img {
-        opacity: 0;
-    }
-    .banner h3 {
-        font-size: 2rem;
-    }
-    .product {
-        display: block;
-    }
-    .pro_anime {
-        width: 100%;
-        height: auto;
-    }
-    .pro_content h2 {
-        padding: 0.5rem;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-    .pro_desc {
-        width: 40ch;
-        padding: 0 2rem;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .main_pro {
-        width: 400px;
-        height: 300px;
-    }
-}
-
-@media (max-width: 500px) {
-    .pro_desc {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .main_pro {
-        width: 300px;
-        height: 200px;
-        margin: 1rem;
-    }
-}
-
-
-/*------------------------------------------------------Testimonials-----------------------------------------------*/
-
-section {
-    z-index: -1;
-}
-
-#test h1 {
-    font-size: 5rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.testimonials {
-    background: rgb(255, 255, 255);
-    width: 100%;
-    height: 100vh;
-}
-
-.box_shape {
-    background-color: rgb(243, 103, 103);
-    width: 500px;
-    height: 500px;
-    padding: 2rem 0;
-    margin: 7rem 0;
-    position: absolute;
-    top: 125rem;
-    transform: rotate(45deg);
-    opacity: 40%;
-}
-
-.rectangle {
-    background: rgb(27, 117, 219);
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    top: 135rem;
-    left: 0;
-    opacity: 40%;
-    z-index: 1;
-}
-
-.rect_image {
-    width: 100%;
-    height: 400px;
-    z-index: 3;
-    position: absolute;
-    top: 50rem;
-    display: flex;
-}
-
-.rect_image img {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-}
-
-.rect_content {
-    padding: 4.5rem 0;
-    margin-left: 10rem;
-}
-
-.rect_content h2 {
-    font-size: 2vw;
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.p_content {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 1.5vw;
-    width: 50ch;
-}
-
-.box_shape_2 {
-    background: black;
-}
-
-.box_shape_2 {
-    background-color: rgb(243, 103, 103);
-    width: 500px;
-    height: 500px;
-    float: right;
-    position: absolute;
-    top: 171rem;
-    right: 0;
-    transform: rotate(45deg);
-    opacity: 40%;
-}
-
-.rectangle_2 {
-    background: rgb(27, 117, 219);
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    top: 180rem;
-    right: 0;
-    opacity: 40%;
-    z-index: 1;
-}
-
-.rect_image {
-    width: 100%;
-    height: 400px;
-    z-index: 3;
-    position: absolute;
-    top: 132rem;
-    display: flex;
-}
-
-.rect_image_2 {
-    width: 100%;
-    height: 400px;
-    z-index: 3;
-    position: absolute;
-    top: 176rem;
-    display: flex;
-}
-
-.rect_image_2 img {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    border-radius: 50%;
-    top: -5rem;
-    right: 0;
-    z-index: 2;
-}
-
-.rect_content_2 {
-    padding: 4.5rem 0;
-    margin-left: 3rem;
-}
-
-.rect_content_2 h2 {
-    font-size: 2vw;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.p_content_2 {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 1.5vw;
-    width: 50ch;
-}
-
-.mob_container {
-    display: none;
-}
-
-@media (max-width: 1024px) {
-    .rectangle {
-        width: 120%;
-    }
-    .rect_image {
-        width: 100%;
-        position: absolute;
-        top: 110rem;
-    }
-    .test .rectangle {
-        position: absolute;
-        top: 115rem;
-    }
-    .rect_content {
-        width: 100%;
-        padding: 7rem 2rem;
-    }
-    .rect_content h2 {
-        font-size: 1.5rem;
-        padding: 0;
-    }
-    .p_content {
-        width: 30ch;
-    }
-    .rect_content_2 {
-        padding: 2rem 0;
-        margin-left: 5rem;
-    }
-    .rect_content_2 h2 {
-        width: 20ch;
-        font-size: 1.5rem;
-        margin-right: 2rem;
-    }
-    .p_content_2 {
-        width: 30ch;
-    }
-}
-
-@media (max-width: 800px) {
-    .test {
-        display: none;
-    }
-    .mob_container {
-        display: block;
-    }
-    .mob_inner {
-        width: 100%;
-        display: block;
-    }
-    .mob_inner img {
-        width: 100%;
-        height: auto;
-    }
-    .inner_content {
-        padding-top: 1rem;
-        width: 100%;
-        margin: auto;
-        text-align: center;
-    }
-    .inner_content h2 {
-        font-size: 1rem;
-    }
-    .inner_content p {
-        font-size: 1rem;
-        margin: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .inner_content h2 {
-        font-size: 2rem;
-    }
-    .inner_content p {
-        font-size: 2rem;
-        margin: auto;
-    }
-}
-
-@media (max-width: 540px) {
-    .mob_container {
-        width: 100%;
-    }
-    .inner_content h2 {
-        font-size: 1rem;
-    }
-    .inner_content p {
-        font-size: 1rem;
-        margin: auto;
-    }
-}
+                            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            body {
+                                font-family: "Poppins", sans-serif;
+                                background: #F8FCFF;
+                                overflow-x: hidden;
+                            }
+                            
+                            header {
+                                width: 100%;
+                                height: 50px;
+                                /* background-color: black; */
+                            }
+                            
+                            a:link {
+                                text-decoration: none;
+                            }
+                            /* commom code */
+                            
+                            .d-flex {
+                                display: flex;
+                            }
+                            
+                            .d-block {
+                                display: block;
+                            }
+                            /* nav */
+                            
+                            nav {
+                                /* background: #6818D9; */
+                                background: #F8FCFF;
+                                height: 80px;
+                                width: 100%;
+                                display: flex;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                z-index: 5;
+                            }
+                            
+                            label.logo {
+                                color: rgb(57, 20, 136);
+                                font-size: 25px;
+                                line-height: 80px;
+                                padding: 0;
+                            }
+                            
+                            nav ul {
+                                position: fixed;
+                                top: 0;
+                                right: 0;
+                                margin: 0;
+                            }
+                            
+                            nav ul li {
+                                display: inline-block;
+                                line-height: 80px;
+                                margin: 0 5px;
+                            }
+                            
+                            nav ul li a {
+                                color: rgb(57, 20, 136);
+                                font-size: 1vw;
+                                font-weight: bolder;
+                                padding: 7px 13px;
+                                border-radius: 3px;
+                                text-transform: uppercase;
+                            }
+                            
+                            a:hover,
+                            a:active {
+                                background: #1b9bff;
+                            }
+                            
+                            .checkbtn {
+                                font-size: 30px;
+                                color: white;
+                                float: right;
+                                line-height: 80px;
+                                margin-right: 40px;
+                                cursor: pointer;
+                                display: none;
+                            }
+                            
+                            #check {
+                                display: none;
+                            }
+                            
+                            .banner {
+                                height: 100vh;
+                            }
+                            
+                            .logo_img {
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 30px;
+                                margin: 0.5rem;
+                            }
+                            
+                            .b_image {
+                                position: relative;
+                                text-align: center;
+                                margin-right: 1rem;
+                            }
+                            
+                            .b_image img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                padding-top: 7rem;
+                            }
+                            
+                            .b_container {
+                                background: #F8FCFF;
+                            }
+                            
+                            .b_content {
+                                margin: 7rem;
+                            }
+                            
+                            .b_content h1 {
+                                font-size: 3.5vw;
+                                color: rgb(57, 20, 136);
+                                font-family: 'Lato', sans-serif;
+                            }
+                            
+                            .b_content p {
+                                font-size: 2vw;
+                                padding-top: 20px;
+                            }
+                            
+                            .b_content .b_btn {
+                                margin: 2rem 0;
+                            }
+                            
+                            .b_content .b_btn button {
+                                padding: 0.8rem;
+                                background: darkblue;
+                                border: none;
+                                color: white;
+                                border-radius: 4px;
+                                font-size: 1.5rem;
+                            }
+                            /*-------------------------------------------- feature product------------------------------------ */
+                            
+                            .product {
+                                background: white;
+                                position: relative;
+                            }
+                            
+                            .fp_inner {
+                                align-items: center;
+                                justify-content: center;
+                                background: rgb(188, 210, 243);
+                            }
+                            
+                            .fp_inner img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                            }
+                            
+                            .fp_inner h3 {
+                                padding: 2rem;
+                                font-size: 3vw;
+                            }
+                            
+                            .fp_cont {
+                                margin-top: 2rem;
+                            }
+                            
+                            .pro_anime {
+                                width: 100%;
+                                height: auto;
+                            }
+                            
+                            .pro_content {
+                                text-align: center;
+                                justify-content: center;
+                                margin-top: 10rem;
+                                margin-right: 2rem;
+                            }
+                            
+                            .pro_content h2 {
+                                font-size: 2.5vw;
+                            }
+                            
+                            .pro_content p {
+                                width: 40ch;
+                                text-align: center;
+                                margin: auto;
+                                font-size: 1.5vw;
+                            }
+                            
+                            .main_pro {
+                                width: 100%;
+                                height: auto;
+                                margin: 3rem 0;
+                                border: 2px solid black;
+                            }
+                            /* ----------------------------------------Mobile View----------------------------------- */
+                            
+                            @media (max-width: 900px) {
+                                .logo {
+                                    display: none;
+                                }
+                                .avatar {
+                                    height: 90vh;
+                                }
+                                label.logo {
+                                    font-size: 15px;
+                                    padding-left: 10px;
+                                }
+                                nav ul {
+                                    z-index: -1;
+                                }
+                                nav ul li a {
+                                    font-size: 16px;
+                                }
+                            }
+                            
+                            @media(max-width:800px) {
+                                .b_container {
+                                    display: block;
+                                }
+                                .b_content {
+                                    width: 100%;
+                                    margin: auto;
+                                }
+                                .b_content h1 {
+                                    text-align: center;
+                                    font-size: 1.5rem;
+                                    margin-top: 3rem;
+                                }
+                                .b_content p {
+                                    margin: auto;
+                                    text-align: center;
+                                    font-size: 3vw;
+                                }
+                                .center {
+                                    left: 50%;
+                                    -ms-transform: translate(-50%, -50%);
+                                    transform: translate(-50%, 150%);
+                                }
+                                .b_image img {
+                                    /* width: 200px; */
+                                    height: auto;
+                                    margin: auto;
+                                    border-radius: 0;
+                                    padding: 0;
+                                }
+                                .checkbtn {
+                                    margin-right: 0.5rem;
+                                    color: rgb(57, 20, 136);
+                                }
+                                .celeb {
+                                    width: 7rem;
+                                    height: 2rem;
+                                    font-size: 0.8rem;
+                                    padding: 0;
+                                }
+                                .b_content .b_btn {
+                                    text-align: center;
+                                }
+                                .b_content .b_btn button {
+                                    font-size: 15px;
+                                    padding: 10px;
+                                }
+                                .logo_img {
+                                    width: 35px;
+                                    height: 35px;
+                                    margin: 1.5rem;
+                                    border-radius: 20px;
+                                }
+                                .fp_cont {
+                                    display: block;
+                                }
+                                .fp_inner img {
+                                    display: none;
+                                }
+                                .pro_content {
+                                    margin: 0;
+                                }
+                                .pro_content p {
+                                    font-size: 2vw;
+                                }
+                                .main_pro {
+                                    width: 300px;
+                                    height: auto;
+                                }
+                            }
+                            
+                            .b_container {
+                                width: 100%;
+                            }
+                            
+                            .b_content {
+                                width: 50%;
+                                position: relative;
+                            }
+                            
+                            .b_content h1 {
+                                font-weight: 400px;
+                            }
+                            
+                            @media (max-width: 858px) {
+                                .checkbtn {
+                                    display: block;
+                                    float: right;
+                                    padding: 0.2rem;
+                                    position: fixed;
+                                    right: 0;
+                                    margin-right: 2rem;
+                                }
+                                ul {
+                                    position: fixed;
+                                    top: 80px;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100vh;
+                                    background: #6d05ff;
+                                    text-align: center;
+                                    transition: all 0.5s;
+                                }
+                                nav ul li {
+                                    display: block;
+                                    margin: 50px 0;
+                                    line-height: 30px;
+                                }
+                                nav ul li a {
+                                    font-size: 15px;
+                                }
+                                #check:checked~ul {
+                                    left: -200%;
+                                }
+                                .avatar {
+                                    margin-top: 0;
+                                }
+                            }
+                            
+                            @media only screen and (max-width: 1024px) {
+                                .banner {
+                                    height: 50vh;
+                                }
+                                .avatar img {
+                                    width: 60%;
+                                    height: 500px;
+                                    padding-top: 2rem;
+                                }
+                                .avatar h1 {
+                                    font-size: 2rem;
+                                    margin-bottom: 1rem;
+                                }
+                                .desc {
+                                    font-size: 1rem;
+                                    padding-top: 0;
+                                    margin: 0;
+                                }
+                                .b_content {
+                                    width: 50%;
+                                    height: auto;
+                                }
+                                .fp_inner h3 {
+                                    padding: 2rem;
+                                    font-size: 7vw;
+                                }
+                                .main_pro {
+                                    width: 200px;
+                                    height: 150px;
+                                    margin: 2rem;
+                                }
+                            }
+                            
+                            @media(max-width:300px) {
+                                .b_content {
+                                    font-size: 2px;
+                                    width: 100%;
+                                }
+                                .b_content p {
+                                    text-align: center;
+                                    padding: 0;
+                                }
+                            }
+                            
+                            @media(max-width:400px) {
+                                .banner {
+                                    height: 76vh;
+                                }
+                                .b_content h1 {
+                                    font-size: 15px;
+                                }
+                                .fp_inner h3 {
+                                    padding: 2rem;
+                                    font-size: 20px;
+                                }
+                                .pro_content h2 {
+                                    font-size: 20px;
+                                }
+                                .pro_content p {
+                                    font-size: 10px;
+                                }
+                                .main_pro {
+                                    width: 200px;
+                                    height: auto;
+                                }
+                            }
+                            
+                            @media(max-width:500px) {
+                                .banner {
+                                    height: 90vh;
+                                }
+                                .b_content h1 {
+                                    font-size: 20px;
+                                }
+                                .fp_inner h3 {
+                                    padding: 2rem;
+                                    font-size: 9vw;
+                                }
+                            }
+                            
+                            @media(max-width:768px) {
+                                .banner {
+                                    height: 100vh;
+                                }
+                                .fp_inner h3 {
+                                    padding: 2rem;
+                                    font-size: 9vw;
+                                }
+                                .pro_content h2 {
+                                    font-size: 40px;
+                                }
+                            }
+                            
+                            @media(max-width:280px) {
+                                .b_content p {
+                                    padding: 1rem;
+                                    width: 30ch;
+                                }
+                            }
+                            /* ----------------------------Testimonials Desktop-------------------------- */
+                            
+                            .mob_container {
+                                display: none;
+                            }
+                            
+                            #test h1 {
+                                font-size: 5rem;
+                                text-align: center;
+                                padding: 2rem;
+                            }
+                            
+                            .test {
+                                position: relative;
+                            }
+                            
+                            .box_shape {
+                                background-color: rgb(243, 103, 103);
+                                width: 500px;
+                                height: 500px;
+                                padding: 2rem 0;
+                                margin: 7rem 0;
+                                position: absolute;
+                                top: 9rem;
+                                transform: rotate(45deg);
+                                opacity: 40%;
+                            }
+                            
+                            .rectangle {
+                                background: rgb(27, 117, 219);
+                                width: 120%;
+                                height: 300px;
+                                position: absolute;
+                                top: 22rem;
+                                left: 0;
+                                opacity: 40%;
+                                z-index: 1;
+                            }
+                            
+                            .rect_image {
+                                width: 100%;
+                                height: 400px;
+                                z-index: 3;
+                                position: absolute;
+                                top: 16rem;
+                                display: flex;
+                            }
+                            
+                            .rect_image img {
+                                width: 500px;
+                                height: 500px;
+                                border-radius: 50%;
+                            }
+                            
+                            .rect_content {
+                                padding-top: 7rem;
+                                padding-left: 3rem;
+                                margin: auto;
+                            }
+                            
+                            .rect_content h2 {
+                                font-size: 2vw;
+                                text-align: center;
+                                padding-top: 0.5rem;
+                            }
+                            
+                            .p_content {
+                                text-align: center;
+                                padding: 1rem 0;
+                                font-size: 1.5vw;
+                                width: 50ch;
+                            }
+                            
+                            .box_shape_2 {
+                                background-color: rgb(243, 103, 103);
+                                width: 500px;
+                                height: 500px;
+                                float: right;
+                                position: absolute;
+                                top: 60rem;
+                                right: 0;
+                                transform: rotate(45deg);
+                                opacity: 40%;
+                            }
+                            
+                            .rectangle_2 {
+                                background: rgb(27, 117, 219);
+                                width: 100%;
+                                height: 300px;
+                                position: absolute;
+                                top: 65rem;
+                                right: 0;
+                                opacity: 40%;
+                                z-index: 1;
+                            }
+                            
+                            .rect_image_2 {
+                                width: 100%;
+                                height: 400px;
+                                z-index: 3;
+                                position: absolute;
+                                top: 65rem;
+                                display: flex;
+                            }
+                            
+                            .rect_image_2 img {
+                                width: 500px;
+                                height: 500px;
+                                position: absolute;
+                                border-radius: 50%;
+                                top: -5rem;
+                                right: 0;
+                                z-index: 2;
+                            }
+                            
+                            .rect_content_2 {
+                                padding: 2rem 0;
+                                margin-left: 3rem;
+                            }
+                            
+                            .rect_content_2 h2 {
+                                font-size: 2vw;
+                                text-align: center;
+                                padding-top: 1rem;
+                            }
+                            
+                            .p_content_2 {
+                                text-align: center;
+                                padding: 1rem 0;
+                                font-size: 1.5vw;
+                                width: 50ch;
+                            }
+                            
+                            @media (max-width: 1024px) {
+                                .rect_image {
+                                    width: 100%;
+                                }
+                                .rect_content {
+                                    width: 100%;
+                                    padding: 7rem 2rem;
+                                }
+                                .rect_content h2 {
+                                    font-size: 1.5rem;
+                                    padding: 0;
+                                }
+                                .p_content {
+                                    width: 30ch;
+                                    margin: auto;
+                                }
+                                .rect_content_2 {
+                                    padding: 2rem 0;
+                                    margin-left: 5rem;
+                                }
+                                .rect_content_2 h2 {
+                                    width: 20ch;
+                                    font-size: 1.5rem;
+                                    margin-right: 2rem;
+                                }
+                                .p_content_2 {
+                                    width: 30ch;
+                                }
+                            }
+                            /* --------------Testimonials mobile view---------------------------------------- */
+                            
+                            @media (max-width: 800px) {
+                                .test {
+                                    display: none;
+                                }
+                                .mob_container {
+                                    display: block;
+                                }
+                                .mob_container h1 {
+                                    font-size: 40px;
+                                }
+                                .mob_inner {
+                                    width: 100%;
+                                    display: block;
+                                }
+                                .mob_inner img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                .inner_content {
+                                    padding: 2rem 2rem;
+                                    width: 100%;
+                                    margin: auto;
+                                    text-align: center;
+                                }
+                                .inner_content h2 {
+                                    font-size: 30px;
+                                    padding: 1rem 0;
+                                }
+                                .inner_content p {
+                                    font-size: 1rem;
+                                    margin: auto;
+                                }
+                            }
+                            /* @media (max-width: 768px) {
+                                .inner_content h2 {
+                                    font-size: 2rem;
+                                }
+                                .inner_content p {
+                                    font-size: 2rem;
+                                    margin: auto;
+                                }
+                            } */
+                            
+                            @media (max-width: 540px) {
+                                .mob_container {
+                                    width: 100%;
+                                }
+                                .inner_content h2 {
+                                    font-size: 1rem;
+                                }
+                                .inner_content p {
+                                    font-size: 0.7rem;
+                                    margin: auto;
+                                }
+                            }
